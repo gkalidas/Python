@@ -5,6 +5,7 @@
 #Use randint(0, len(board_in) - 1).
 #Call each function on board.
 #added else part,No idea why board[guess_row][guess_col] = "X" this was set?
+#"X" becuase we want to know the current location of the ship
 
 from random import randint 
 

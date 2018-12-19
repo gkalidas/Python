@@ -4,6 +4,7 @@
 #These functions should return a random row index and a random column index from your board, respectively.
 #Use randint(0, len(board_in) - 1).
 #Call each function on board.
+#added else part,No idea why board[guess_row][guess_col] = "X" this was set?
 
 from random import randint 
 
@@ -31,3 +32,10 @@ print ship_col
 
 guess_row = int(raw_input("Guess Row :"))
 guess_col = int(raw_input("Guess Col :"))
+
+if guess_row == ship_row and guess_col == ship_col:
+  print "Congratulations! You sank my battleship!"
+else:
+  print "You missed my battleship!"
+  board[guess_row][guess_col] = "X"
+  print_board(board)

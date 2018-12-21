@@ -6,7 +6,7 @@ mycursor = mydb.cursor()
 
 sql = "select name from customers where lname= %s"
 val = ("londhe",)
-mycursor.execute(sql,val)
+mycursor.execute(sql,(val, ))
 myresult = mycursor.fetchall()
 for x in myresult:
 	print(x)

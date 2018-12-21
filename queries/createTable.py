@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-query = "create table a(name varchar(220) primary key,address varchar(220))"
+query = "create table products(id int, name varchar(220))"
 mycursor.execute(query)
 
 for x in mycursor:

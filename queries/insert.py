@@ -6,10 +6,11 @@ mydb = mysql.connector.connect(host="localhost",user="root",password="shA2189",d
 
 mycursor = mydb.cursor()
 
-sql = "insert into customers (name,address,id) values( %s,%s,%s)"
+sql = "insert into products (id,name) values( %s,%s)"
 val = [
-("Tushar","Ravet",6),
-("sayali","Dange",7)
+(1,"John"),
+(2,"Peter"),
+(3,"Amy")
 ]
 mycursor.executemany(sql,val)
 

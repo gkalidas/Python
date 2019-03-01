@@ -31,7 +31,7 @@ try:
 	myresult = mycursor.fetchall()
 	for o,p,x in myresult:
 		dictionary.setdefault(o, []).append(x)
-		
+			
 	with open('./dictionary.csv', 'w') as csv_file:
 		writer = csv.writer(csv_file)
 		for key, value in dictionary.items():
@@ -47,24 +47,3 @@ except mysql.connector.Error as err:
 	print(err)
 
 print(mycursor.rowcount,"record(s) affected")
-
-
-
-# This is from another file
-import pandas as pd
-rf = pd.read_csv('D:\home\git_projects\Python\MCS_project_sem_III\coding\dictionary.csv',header=None)
-
-#to slice the the series,i.e.to take only duration from the csv
-rf[1]
-
-#empty list to store the duration
-list_dur=[]
-
-for x in rf:
-    #print("x",x)
-    #x prints 0-number of rows in this case it is 16k...
-    
-    #storint the each row as a list, need to slice each list into list
-    list_dur=rf[1].tolist()
-    
-print(list_dur[:3])

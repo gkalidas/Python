@@ -11,3 +11,5 @@ https://en.wikipedia.org/wiki/NumPy
 https://en.wikipedia.org/wiki/Matplotlib
 https://en.wikipedia.org/wiki/SQLAlchemy
 https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+https://www.regular-expressions.info/python.html
+

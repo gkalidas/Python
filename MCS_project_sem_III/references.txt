@@ -1,0 +1,15 @@
+
+https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68
+
+https://www.tutorialspoint.com/dwh/dwh_data_warehousing.htm
+
+#make ppt on it
+https://www.geeksforgeeks.org/supervised-unsupervised-learning/
+
+https://en.wikipedia.org/wiki/Pandas_(software)
+https://en.wikipedia.org/wiki/NumPy
+https://en.wikipedia.org/wiki/Matplotlib
+https://en.wikipedia.org/wiki/SQLAlchemy
+https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+https://www.regular-expressions.info/python.html
+

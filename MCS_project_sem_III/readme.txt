@@ -1,3 +1,7 @@
+pandas
+regex
+
+
 1) connect.py - used to connect python to the mysql
 2) writeDict.py - will fetch all p60 related tests from rtcdb
 3) 

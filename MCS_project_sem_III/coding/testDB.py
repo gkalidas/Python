@@ -4,7 +4,7 @@ import mysql.connector
 from sqlalchemy import create_engine
 from pandas import DataFrame
 import re
-pwd = 
+pwd = "abc123"
 engine = create_engine('mysql+mysqlconnector://root:',pwd,'@localhost/rtcdb')
 sql = "select \
 (select tasks.project_id) as pro_id, \

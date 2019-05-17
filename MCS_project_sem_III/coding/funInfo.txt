@@ -1,0 +1,30 @@
+scatter
+
+file : centroidTest2.py
+
+plt.scatter(centroids[:,0],centroids[:,1],marker = "x",s = 20, linewidth = 5 , zorder = 10)
+
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html
+
+matplotlib.pyplot.scatter(x, y, s=None, c=None, marker=None, cmap=None, 
+norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, *, data=None, **kwargs)
+
+A scatter plot of y vs x with varying marker size and/or color.
+
+x, y : array_like, shape (n, )
+The data positions.
+
+marker : MarkerStyle, optional
+The marker style. marker can be either an instance of the class or the text shorthand for a particular marker.
+Defaults to None, in which case it takes the value of rcParams["scatter.marker"] = 'o'. See markers for more information about marker styles.
+I have used the marker as "x".
+
+linewidths : scalar or array_like, optional, default: None
+The linewidth of the marker edges. Note: The default edgecolors is 'face'. You may want to change this as well.
+If None, defaults to rcParams lines.linewidth.
+
+zorder :
+The default drawing order for axes is patches, lines, text.
+This order is determined by the zorder attribute.
+overlapping of the drawn element over last one.
+

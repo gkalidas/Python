@@ -1,0 +1,134 @@
+mysql> show tables;
++---------------------------+
+| Tables_in_rtcdb           |
++---------------------------+
+| db_cleanup_scheduler      |
+| killed_hang_tasks         |
+| logs                      |
+| logs_orig                 |
+| machines                  |
+| noregimpact               |
+| project_superauto_tests   |
+| projects                  |
+| task_run_directories      |
+| task_run_directories_orig |
+| tasks                     |
+| tasks_orig                |
+| test1                     |
+| test2                     |
+| test_runs                 |
+| test_runs_orig            |
+| test_runs_temp3           |
+| version                   |
++---------------------------+
+18 rows in set (0.00 sec)
+
+mysql> show columns from test_runs;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| task_id      | int(11)      | NO   | MUL | NULL    |                |
+| machine_id   | int(11)      | NO   | MUL | NULL    |                |
+| test_name    | varchar(255) | NO   | MUL | NULL    |                |
+| started      | datetime     | YES  | MUL | NULL    |                |
+| finished     | datetime     | YES  | MUL | NULL    |                |
+| time_zone    | varchar(63)  | NO   |     | NULL    |                |
+| status       | varchar(15)  | NO   | MUL | success |                |
+| failure_line | int(11)      | NO   |     | NULL    |                |
+| fake         | tinyint(11)  | NO   |     | NULL    |                |
+| mach_name    | varchar(255) | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.08 sec)
+
+mysql> show columns from tasks;
++-------------------------------+--------------+------+-----+---------+----------------+
+| Field                         | Type         | Null | Key | Default | Extra          |
++-------------------------------+--------------+------+-----+---------+----------------+
+| id                            | int(11)      | NO   | PRI | NULL    | auto_increment |
+| farm_name                     | varchar(63)  | NO   |     | NULL    |                |
+| owner_name                    | varchar(63)  | NO   | MUL | NULL    |                |
+| user_name                     | varchar(63)  | NO   |     | NULL    |                |
+| user_password                 | varchar(63)  | NO   |     | NULL    |                |
+| api_token                     | varchar(63)  | NO   |     | NULL    |                |
+| project_id                    | varchar(63)  | NO   | MUL | NULL    |                |
+| project_uri                   | varchar(255) | NO   |     | NULL    |                |
+| built_project_uri             | varchar(255) | NO   |     | NULL    |                |
+| build_targets                 | text         | NO   |     | NULL    |                |
+| stream                        | varchar(31)  | NO   |     | NULL    |                |
+| tests_set                     | varchar(31)  | NO   |     | NULL    |                |
+| platform                      | varchar(31)  | NO   |     | NULL    |                |
+| run_mode                      | int(11)      | NO   |     | NULL    |                |
+| graphics_mode                 | int(11)      | NO   |     | NULL    |                |
+| other_options                 | varchar(255) | NO   |     | NULL    |                |
+| compare_to_system             | tinyint(4)   | NO   |     | NULL    |                |
+| tolerance                     | smallint(6)  | NO   |     | NULL    |                |
+| environment                   | varchar(500) | YES  |     | NULL    |                |
+| tests_path                    | varchar(255) | NO   |     | NULL    |                |
+| build                         | tinyint(4)   | NO   |     | NULL    |                |
+| cc                            | varchar(255) | NO   |     | NULL    |                |
+| for_submission                | tinyint(4)   | NO   |     | NULL    |                |
+| cancelled                     | tinyint(4)   | NO   |     | NULL    |                |
+| runner_status                 | varchar(31)  | NO   | MUL | NULL    |                |
+| runner_item_url               | varchar(255) | NO   |     | NULL    |                |
+| runner_job_url                | varchar(255) | NO   |     | NULL    |                |
+| runner_submitted              | datetime     | YES  |     | NULL    |                |
+| runner_started                | datetime     | YES  |     | NULL    |                |
+| runner_finished               | datetime     | YES  |     | NULL    |                |
+| runner_time_remaining         | int(11)      | NO   |     | NULL    |                |
+| runner_time_remaining_updated | datetime     | YES  |     | NULL    |                |
+| builder_status                | varchar(31)  | NO   | MUL | NULL    |                |
+| builder_item_url              | varchar(255) | NO   |     | NULL    |                |
+| builder_job_url               | varchar(255) | NO   | MUL | NULL    |                |
+| builder_submitted             | datetime     | YES  |     | NULL    |                |
+| builder_started               | datetime     | YES  |     | NULL    |                |
+| builder_finished              | datetime     | YES  |     | NULL    |                |
+| runner_log_size               | int(11)      | NO   |     | NULL    |                |
+| builder_log_size              | int(11)      | NO   |     | NULL    |                |
+| runner_log_next               | int(11)      | NO   |     | NULL    |                |
+| builder_log_next              | int(11)      | NO   |     | NULL    |                |
+| tests_succeeded               | int(11)      | NO   |     | NULL    |                |
+| tests_failed                  | int(11)      | NO   |     | NULL    |                |
+| tests_skipped                 | int(11)      | NO   |     | NULL    |                |
+| tests_total                   | int(11)      | NO   |     | NULL    |                |
+| targets_built                 | int(11)      | NO   |     | NULL    |                |
+| targets_total                 | int(11)      | NO   |     | NULL    |                |
+| zip_project_uri               | varchar(255) | NO   |     | NULL    |                |
+| builderCleanup                | varchar(255) | YES  |     | NULL    |                |
+| waitingQno                    | int(11)      | NO   |     | NULL    |                |
+| strictToUseStream             | bit(1)       | NO   |     | NULL    |                |
+| tests_systemfail              | int(11)      | NO   |     | NULL    |                |
+| builder_resubmit              | int(11)      | NO   |     | NULL    |                |
+| runner_resubmit               | int(11)      | NO   |     | NULL    |                |
+| mode                          | varchar(255) | NO   |     | NULL    |                |
+| plafrom                       | varchar(255) | NO   |     | NULL    |                |
+| max_num_parallel_runs         | int(11)      | NO   |     | NULL    |                |
+| num_unstable_runs             | int(11)      | NO   |     | NULL    |                |
+| remove_unstable_tests         | bit(1)       | NO   |     | NULL    |                |
+| unstable_regs_mode            | bit(1)       | NO   |     | NULL    |                |
+| isCalculateTestsJobLaunched   | bit(1)       | YES  |     | NULL    |                |
+| calculateTestsJobLaunched     | bit(1)       | NO   |     | NULL    |                |
+| is_childtask                  | bit(1)       | NO   |     | NULL    |                |
+| child_task_link               | varchar(255) | YES  |     | NULL    |                |
+| parent_task_url               | varchar(255) | YES  |     | NULL    |                |
+| builderLogFile                | varchar(255) | YES  |     | NULL    |                |
+| runnerLogFile                 | varchar(255) | YES  |     | NULL    |                |
+| run_on_local_install          | bit(1)       | NO   |     | NULL    |                |
++-------------------------------+--------------+------+-----+---------+----------------+
+69 rows in set (0.04 sec)
+
+mysql> select COUNT(*) FROM tasks;
++----------+
+| COUNT(*) |
++----------+
+|      554 |
++----------+
+1 row in set (0.02 sec)
+
+mysql> select COUNT(*) FROM test_runs;
++----------+
+| COUNT(*) |
++----------+
+|  6588148 |
++----------+
+1 row in set (7.09 sec)

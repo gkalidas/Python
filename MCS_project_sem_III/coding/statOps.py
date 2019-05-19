@@ -45,4 +45,3 @@ with open('D:\home\git_projects\Python\MCS_project_sem_III\coding\stasOpsNormTes
         df = pd.DataFrame.from_dict(dataDict, orient='index')
         df.to_csv(f,header=False)
         dataDict={}	
-

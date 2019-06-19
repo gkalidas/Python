@@ -1,0 +1,35 @@
+1) Pragmatics
+aptitude: ratio and proportion
+technical interview: sql - create a school management DB, relation between table, now explain this using OOPS concepts
+		     OOPS - what will be the relationship between these two classes
+		     what have you learnt so far in your internship
+
+2) FIS
+technical aptitude:
+write a program to
+> check whether given string is pallindrome or not.
+> find out the second highest number from a given array.
+> remove special characters from the given string
+
+technical interview:
+> variable declaration, definition.
+> storage classes(auto, static, extern, register)
+> call by value, reference
+> swap given numbers by two methods
+> calloc, malloc, realloc, free
+> pointer, void(generic)
+> structure and union
+> stack
+> binary, selection search
+> bubble sort
+
+3) Syngenta
+aptitude: train, ratio and proportion, probability
+Group discussion: Who'll be the next PM?
+
+4) TCS
+
+aptitude: train, ratio and proportion, probability, stream(up and down with boat)
+technical: c/cpp - pointer and array.
+techincal program : print sum of two given numbers(data type double).
+

@@ -1,0 +1,3 @@
+
+dynamically typed vs static typed language
+
